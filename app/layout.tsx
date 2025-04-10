@@ -3,6 +3,7 @@ import { Lato } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/general/navbar";
 import { ThemeProvider } from "./components/general/theme-provider";
+import Footer from "./components/general/footer";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
           <div className="max-w-10xl mx-auto px-4 md:px-6 lg:px-8">
             <Navbar/>
             {children}
+            <Footer/>
           </div>
         </ThemeProvider>
       </body>
